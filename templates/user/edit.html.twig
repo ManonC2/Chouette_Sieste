@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User
+{% endblock %}
+
+{% block body %}
+	<h1>Modifier mon profil</h1>
+
+	{{ form_start(form, {'attr': {'id': 'new_edit_user'}}) }}
+	<div class="form-group">
+		{{ form_label(form.email) }}
+		{{ form_widget(form.email) }}
+		{{ form_label(form.password) }}
+		{{ form_widget(form.password) }}
+		{{ form_label(form.name) }}
+		{{ form_widget(form.name) }}
+		{{ form_label(form.surname) }}
+		{{ form_widget(form.surname) }}
+		{{ form_label(form.adress) }}
+		{{ form_widget(form.adress) }}
+		{{ form_label(form.zipcode) }}
+		{{ form_widget(form.zipcode) }}
+		{{ form_label(form.town) }}
+		{{ form_widget(form.town) }}
+		{{ form_label(form.phone) }}
+		{{ form_widget(form.phone) }}
+		{{ form_label(form.debut) }}
+		{{ form_widget(form.debut) }}
+		{{ form_label(form.fin) }}
+		{{ form_widget(form.fin) }}
+		<br>
+		<button class="btn btn-success">{{ button_label|default('Modifier') }}</button>
+	</div>
+	{{ form_end(form) }}
+
+
+	{{ include('user/_delete_form.html.twig') }}
+{% endblock %}

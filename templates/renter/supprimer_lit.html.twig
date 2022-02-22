@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Loueur
+{% endblock %}
+
+{% block body %}
+
+<h1>Attention</h1>
+<p style="text-align: center;">Voulez vous vraiment supprimer {{ bed.name }} ?</p>
+<div class="profilR">
+    <a class="btn btn-lg btn-success profilRB" href="{{ path('supprimerLit', {'idLit': bed.id }) }}">Oui, je souhaite
+        supprimer
+        {{ bed.name }}</a>
+    <a class="btn btn-lg btn-danger profilRB" href="{{ path('my_beds') }}">Annuler</a>
+</div>
+
+{% endblock %}

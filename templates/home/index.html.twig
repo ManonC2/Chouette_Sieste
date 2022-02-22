@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<div class="carteLit">
+
+		{% for bed in beds %}
+			{% if bed.renter.debut != null %}
+				<img src="img/separateur.png" alt="separateur" class="separateur">
+				<h1>{{ bed.name }}</h1>
+				<h2 style="text-align: center;">{{ bed.size.name }}</h2>
+				<p style="text-align: center;">{{ bed.description }}</p>
+				<p style="text-align: center;">{{ bed.renter.adress}}
+					{{ bed.renter.zipcode}}
+					{{ bed.renter.town }}</p>
+				<br>
+
+				<div class="semainier">
+					{% for journee,semaine in heuresSemaine[i] %}
+						<table>
+							<thead>
+								<th>{{ journee }}</th>
+							</thead>
+							{% for h in semaine %}
+								<tr>
+									{% if h == '-' %}
+										<td style="text-align: center;">
+											{{ h }}
+										</td>
+									{% else %}
+										<td>
+											<a href="{{ path('slot', { 'idLit': bed.id, 'heure': h, 'date': journee })}}" class="lien">{{ h
+						}}</a>
+										</td>
+									{% endif %}
+								</tr>
+							{% endfor %}
+						</table>
+					{% endfor %}
+				</div>
+				{% set i = i +1 %}
+			{% endif %}
+		{% endfor %}
+
+	</div>
+{% endblock %}

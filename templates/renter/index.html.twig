@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Loueur
+{% endblock %}
+
+{% block body %}
+{# <li><a href="{{path('renter_profile') }}">Mon profil</a></li> #}
+<div class="profilR">
+    <a class="btn btn-lg btn-primary profilRB" href="{{ path('new_bed') }}">Envie de créer un
+        nouveau lit ?</a>
+    <a class="btn btn-lg btn-primary profilRB" href="{{ path('my_beds') }}">Mes lits</a>
+    <a class="btn btn-lg btn-primary profilRB" href="{{ path('renter_edit', {'id': app.user.id}) }}">Mon
+        profil</a>
+
+</div>
+
+{% endblock %}

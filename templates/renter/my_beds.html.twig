@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes lits
+{% endblock %}
+
+{% block body %}
+	{% for bed in beds %}
+		<h1>{{ bed.name }}</h1>
+
+		<div class="semainier">
+
+			<table>
+				<thead>
+					<th>Taille</th>
+					<th>Description</th>
+					<th>Type de matelas</th>
+					<th>Type de surmatelas</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{ bed.size.name }}</td>
+						<td>{{ bed.description }}</td>
+						<td>{{ bed.leTypeMatress.name }}</td>
+						<td>{{ bed.leTypeTopperMatress.name }}</td>
+						<td>
+							<a class="btn btn-sm btn-primary" href="{{ path('confirmerSuppressionLit', { 'idLit': bed.id }) }}">Supprimer
+																																																								
+																																																																						le lit</a>
+						</td>
+
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	{% endfor %}
+{% endblock %}

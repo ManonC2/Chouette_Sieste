@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New bed
+{% endblock %}
+
+{% block body %}
+	<h1>Create new bed</h1>
+	{{ form_start(form) }}
+
+
+	<div class="form-group">
+		{{ form_label(form.name) }}
+		{{ form_widget(form.name) }}
+		{{ form_label(form.size) }}
+		{{ form_widget(form.size) }}
+		{{ form_label(form.description) }}
+		{{ form_widget(form.description) }}
+		{{ form_label(form.leTypeMatress) }}
+		{{ form_widget(form.leTypeMatress) }}
+		{{ form_label(form.leTypeTopperMatress) }}
+		{{ form_widget(form.leTypeTopperMatress) }}
+		<br>
+		<button type="submit" class="btn btn-success">Valider</button>
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

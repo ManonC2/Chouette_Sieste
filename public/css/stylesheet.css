@@ -1,0 +1,151 @@
+body {
+    background-color: white;
+    color : black;
+}
+
+.table {
+    color: white;
+}
+
+.navbar{
+    background-color: #189ab4;
+    flex-direction: column;
+}
+
+.imageNavbar {
+    display: flex;
+    height: 100px;
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+.btn-primary {
+    background-color: #d4f1f4;
+    color: black;
+}
+
+.btn-success {
+    background-color: #75e6da;
+}
+
+.chouette {
+    font-family: 'Delius Swash Caps', cursive;
+    color : white;  
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.semainier {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.bouton{
+    display: flex;
+    flex-direction: column;
+}
+
+th {
+    text-align: center;
+    border-radius: 30px;
+    background-color: #75e6da;
+    padding: 10%;
+    color: white;
+    width:max-content;
+}
+
+
+td {
+    text-align: center;
+    padding: 10%;
+    margin: 30%;
+    background-color: #189ab4;
+    border-radius: 30px;
+}
+
+td.table-secondary{
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    padding: 2px;
+}
+td.table-primary {
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    padding: 4px;
+    background-color: #189ab4;
+}
+
+.lien {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-family: 'Delius Swash Caps', cursive;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.separateur {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content:space-between;
+    color: white;
+}
+
+.help {
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.profil {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.bonjour {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilR {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.profilRB {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profilS {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.rdv th {
+    border-style: hidden;
+}
+.rdv td {
+    background-color: white;
+    text-align: center;
+    color: black;
+    border-style: hidden;
+}
